@@ -2,37 +2,38 @@ package corejava;
 
 class Animal 
 {
-	//method
-	public void display()
+	public void makesound()
 	{
-		System.out.println("Inside a parent class");
-	}
-	
-}
-//child class
-class Dog extends Animal
-{
-	public void sound()
-	{
-		System.out.println("Barks....");
+		System.out.println("The Animal makes a sound");
 	}
 }
-class Puppy extends Dog
+class Dogss extends Animal
 {
-	public void run() 
+	public void makesound()
 	{
-	System.out.println("He runs by small steps...");
+		System.out.println("Barks...");
 	}
 }
-// main class to test here
-class Tester
+class Catss extends Animal
 {
-	public static void main(String args[])
+	public void makesound()
 	{
-// create object of child class
-		Puppy a=new Puppy();
-		a.display();
-		a.sound();
-		a.run();
+		System.out.println("Meow Meow...");
+	}
+}
+class Small
+{
+	public static void main(String[] args)
+	{
+		Animal a=new Animal();
+		Dogss d=new Dogss();
+		Catss c=new Catss();
+		a.makesound();
+		d.makesound();
+		c.makesound();
+		//Creating another object class Animal that refer to 
+		//the object of type Dog
+		Animal a1=new Dogss();
+		a1.makesound();
 	}
 }
